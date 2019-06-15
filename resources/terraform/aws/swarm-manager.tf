@@ -2,6 +2,8 @@ locals {
   manager_user_data = <<TFEOF
 #!/bin/sh
 
+export DEBIAN_FRONTEND=noninteractive
+
 # Mount external volume as docker lib
 
 while true; do
