@@ -2,6 +2,8 @@ locals {
   ethereum_user_data = <<TFEOF
 #! /bin/bash
 
+export DEBIAN_FRONTEND=noninteractive
+
 # Remove old instances of Docker which might ship with ubuntu
 apt-get remove docker docker-engine docker.io
 
