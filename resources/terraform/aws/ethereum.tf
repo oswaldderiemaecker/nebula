@@ -34,7 +34,7 @@ pip install awscli
 export VOLUME_NAME=${var.run_identifier}-parity-${var.ethereum_chain}
 
 docker plugin install --grant-all-permissions rexray/ebs
-docker volume create --driver rexray/ebs --opt size=150 --opt volumetype=gp2 --name $VOLUME_NAME
+docker volume create --driver rexray/ebs --opt size=200 --opt volumetype=gp2 --name $VOLUME_NAME
 
 # Run parity node
 docker run -d \
